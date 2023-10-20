@@ -23,7 +23,9 @@ import {authInterceptorProviders} from './helpers/auth.interceptor';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NzButtonModule,
+    NzFormModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
