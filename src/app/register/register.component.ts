@@ -26,16 +26,20 @@ export class RegisterComponent {
    onSubmit(): void {
     const {username, email, password} = this.form;
 
-    this.authService.register(username, email, password).subscribe(
-      data => {
+    this.authService.register(username, email, password).subscribe({
+
+      next: (data) => {
         console.log(data);
         this.isSuccessful = true;
-        this.isRegisteredFailed = false;
+        this.isRegisteredFailed = false; 
       },
-      err => {
+
+      error: (err) => {
+        console.log(err);
         this.errorMessage = err.error.message;
         this.isRegisteredFailed = true;
-      }
-    )
+      },
+
+     })
    }
 }
