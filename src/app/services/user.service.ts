@@ -3,30 +3,35 @@ import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../user';
 
+const API_URL = 'http://localhost:8081/api/v1/test'; // Replace with your API URL
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private apiServerUrl = 'http://localhost:8081'; // Replace with your API URL
+  
 
 
   constructor(private http: HttpClient) { }
 
-  public getUser(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.apiServerUrl}/api/v1/auth`);
+  // public getUser(): Observable<User[]> {
+  //   return this.http.get<User[]>(`${API_URL}/api/v1/auth`);
+  // }
+
+  getPublicContent(): Observable<any> {
+    return this.http.get(API_URL + 'all', { responseType: 'text' });
   }
 
-
-  public addUser(user: User): Observable<User> {
-    return this.http.post<User>(`${this.apiServerUrl}/api/v1/auth`, user);
+  getUserBoard(): Observable<any> {
+    return this.http.get(API_URL + 'user', { responseType: 'text' });
   }
 
-  public updateUser(user: User): Observable<User> {
-    return this.http.put<User>(`${this.apiServerUrl}/api/v1/auth`, user);
-  }
+  // getModeratorBoard(): Observable<any> {
+  //   return this.http.get(API_URL + 'mod', { responseType: 'text' });
+  // }
 
-  public deleteUser(userId: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiServerUrl}/api/v1/delete/${userId}`);
+  getAdminBoard(): Observable<any> {
+    return this.http.get(API_URL + 'admin', { responseType: 'text' });
   }
 }
