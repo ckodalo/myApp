@@ -13,13 +13,15 @@ import { RegisterComponent } from './register/register.component';
 
 import {authInterceptorProviders} from './helpers/auth.interceptor';
 import { ProfileComponent } from './profile/profile.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
