@@ -1,0 +1,35 @@
+<!-- account-send-money.component.html -->
+
+<section class="account-send-money">
+  <div class="container">
+    <div class="features-content">
+      <h2>Features</h2>
+      <ul>
+        <li>Secure and Seamless Money Transactions</li>
+        <li>Create an Account with Username, Phone Number, and Email</li>
+        <li>Instantly Send Money to Friends and Family using M-Pesa</li>
+        <li>Fast and Secure Fund Transfer</li>
+        <!-- Add more features as needed -->
+      </ul>
+    </div>
+
+    <div class="send-money-content">
+      <h2>Send Money with Fisonet</h2>
+      <p>Experience the ease of sending money to friends and family using Fisonet. Enter the details below to try out our send money functionality.</p>
+
+      <!-- Send Money Form -->
+      <form>
+        <label for="senderPhone">Your Phone Number:</label>
+        <input type="tel" id="senderPhone" name="senderPhone" required>
+
+        <label for="recipientPhone">Recipient's Phone Number:</label>
+        <input type="tel" id="recipientPhone" name="recipientPhone" required>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+
+        <button type="submit">Send Money</button>
+      </form>
+    </div>
+  </div>
+</section>

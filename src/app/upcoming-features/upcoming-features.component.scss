@@ -1,0 +1,67 @@
+/* upcoming-features.component.scss */
+
+.upcoming-features {
+    //background-color: #e0f7fa; /* Set a background color for the upcoming features section */
+    color: #32325d; /* Set text color to a darker shade */
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px; /* Adjust padding as needed */
+  
+      .content {
+        display: flex;
+        justify-content: center;
+  
+        .mobile-app {
+          text-align: center;
+  
+          h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+          }
+  
+          p {
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
+  
+          form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+  
+            label {
+              font-size: 16px;
+              margin-bottom: 8px;
+            }
+  
+            input {
+              width: 100%;
+              padding: 10px;
+              margin-bottom: 15px;
+              border: 1px solid #32325d;
+              border-radius: 4px;
+              font-size: 16px;
+            }
+  
+            button {
+              background-color: #32325d;
+              color: #fff;
+              padding: 12px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              font-size: 18px;
+              transition: background-color 0.3s;
+  
+              &:hover {
+                background-color: #1c1e3c;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
